@@ -6,7 +6,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, macos-latest, ubuntu-latest]
+        os: [windows-latest]
         build_type: [RelWithDebInfo]
         ui: [gui, cli]
         scripting: [lua, noscripts]
@@ -95,6 +95,6 @@ jobs:
     - name: Upload File
       uses: actions/upload-artifact@v4
       with:
-        name: aseprite.zip
+        name: aseprite_${{ runner.os }}.zip
         path: ./build/bin
 
