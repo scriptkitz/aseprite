@@ -96,5 +96,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: aseprite_${{ runner.os }}.zip
-        path: ./build/bin
+        path: ./build/bin/aseprite.exe
 
